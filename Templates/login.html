@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <style>
+    
+      body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f141b;
+      background-image: 
+        linear-gradient(rgba(15, 20, 27, 0.85), rgba(15, 20, 27, 0.85)),
+        url('{{ url_for("static", filename="background.jpg") }}'),
+        radial-gradient(circle at center, #1a202c 0%, #0f141b 80%);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #e0e6f1;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+   
+    .container {
+      background: #1e2634; /* dark slate */
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      width: 350px;
+      text-align: center;
+      border: 1px solid #0ff;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: #00ffd1;
+    }
+
+    
+    .email-container {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1.5px solid #00ffd1;
+      background-color: #0f141b;
+      color: #e0e6f1;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+    input[type="email"]::placeholder {
+      color: #7aa8a8;
+    }
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #00ffc8;
+      box-shadow: 0 0 8px #00ffc8;
+      background-color: #16212b;
+    }
+
+    
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #00ffd1, #00a3ff);
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f141b;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 255, 209, 0.7);
+    }
+    button:hover {
+      background: linear-gradient(90deg, #00a3ff, #00ffd1);
+      box-shadow: 0 6px 16px rgba(0, 255, 209, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Email Login</h2>
+    <form method="post">
+      <div class="email-container">
+        <input type="email" name="email" placeholder="Enter your email" required />
+      </div>
+      <button type="submit">Send OTP</button>
+    </form>
+  </div>
+</body>
+</html>

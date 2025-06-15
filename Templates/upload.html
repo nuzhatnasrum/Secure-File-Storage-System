@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upload File</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f141b;
+      background-image: radial-gradient(circle at center, #1a202c 0%, #0f141b 80%);
+      color: #e0e6f1;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #1e2634;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      width: 400px;
+      text-align: center;
+      border: 1px solid #0ff;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: #00ffd1;
+    }
+
+    .file-container {
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1.5px solid #00ffd1;
+      background-color: #0f141b;
+      color: #e0e6f1;
+      font-size: 16px;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="file"]::-webkit-file-upload-button {
+      background: #00ffd1;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      color: #0f141b;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    input[type="file"]::-webkit-file-upload-button:hover {
+      background: #00a3ff;
+    }
+
+    /* For Firefox */
+    input[type="file"]::file-selector-button {
+      background: #00ffd1;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      color: #0f141b;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    input[type="file"]::file-selector-button:hover {
+      background: #00a3ff;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(90deg, #00ffd1, #00a3ff);
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f141b;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 255, 209, 0.7);
+    }
+    button:hover {
+      background: linear-gradient(90deg, #00a3ff, #00ffd1);
+      box-shadow: 0 6px 16px rgba(0, 255, 209, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Upload & Encrypt File</h2>
+    <form method="post" enctype="multipart/form-data">
+      <div class="file-container">
+        <input type="file" name="file" required />
+      </div>
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+</body>
+</html>
